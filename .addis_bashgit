@@ -1,0 +1,34 @@
+#!/bin/bash
+# vim:ts=4:sw=4
+# set -vx
+
+
+# My git shortcuts file
+# ---------------------
+
+
+# svn
+# -------------
+alias svn_ckin='cd ~/svn/addis; svn ci 2> /dev/null'
+alias svn_ckout='svn checkout https://admin.abel.de.com/repos/addis ~/svn/addis 2> /dev/null'
+alias svn_update='svn update ~/svn/addis 2> /dev/null'
+
+
+# git
+# -------------
+alias ginit='git init'
+alias gdiff='git diff'
+alias gstat='git status'
+alias gtag='git show-ref --tags'
+alias greset='git reset --hard'
+alias gparse='gstat; ~/bin/git_check.sh; glint'
+alias glint='~/bin/git_lint.sh'
+alias gadd='gparse && git add * ; branch'
+alias branch='git branch'
+alias commit='git commit -a -m '
+alias ckout='git checkout'
+alias merge='git merge origin/$1'
+alias rebase='git rebase origin/$1'
+alias push='git push origin'
+alias pull='git pull origin'
+
